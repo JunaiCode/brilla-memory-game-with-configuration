@@ -145,8 +145,8 @@ const Game = ({ movements, setMovements, partners, setPartners, setWin, formated
   };
 
   return (
-    <div>
-      <nav className="nav-brilla">
+    <div className="div-game">
+      <nav className="nav-celsia">
         <img src="/images/logo-navbar.svg" className="logo-nav-bar" alt="logo" />
       </nav>
       <h1 className="title">

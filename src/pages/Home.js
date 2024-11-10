@@ -9,9 +9,9 @@ const Home = () => {
       <article className="hero-image">
         <aside className="hero-image-opacity">
           <div className="hero-image-content">
-          <img src="images/historias-home.svg" className="logo-historias" alt="plasticaucho-logo" />
+          <img src="images/historias-home.svg" className="logo-historias" alt="historias-logo" />
           <div className="button-home">
-          <img src="images/celsia-logo-home.svg" className="logo-celsia" alt="plasticaucho-logo" />
+          <img src="images/celsia-logo-home.svg" className="logo-celsia" alt="celsia-logo" />
             <button onClick={navigateToGame} className="play-button">
               Comencemos
             </button>
