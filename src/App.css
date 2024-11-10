@@ -79,11 +79,11 @@
 
 .stats {
   display: flex;
-  justify-content: flex-start;
+  justify-content:center;
   align-items: baseline;
   width: 100%;
   text-align: center;
-  padding-left: 1rem;
+  margin-top: 1rem;
   gap: 1rem;
 }
 
