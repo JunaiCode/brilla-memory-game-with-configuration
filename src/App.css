@@ -149,10 +149,10 @@
   margin: 0 auto;
   cursor: pointer;
   margin: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: white;
   color: #d9772d;
   border-radius: 1.5rem;
