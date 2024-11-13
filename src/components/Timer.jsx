@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Timer = ({formatedTime,setFormatedTime}) => {
-    const [seconds, setSeconds] = useState(0);
-    const [minutes, setMinutes] = useState(1);
+    const [seconds, setSeconds] = useState(30);
+    const [minutes, setMinutes] = useState(0);
     const navigate = useNavigate();
     useEffect(() => {
         const interval = setInterval(() => {
