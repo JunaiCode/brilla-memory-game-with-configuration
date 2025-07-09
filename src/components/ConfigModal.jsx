@@ -4,11 +4,24 @@ import "./ConfigModal.css";
 const ConfigModal = ({ isOpen, onClose, onSaveConfig, currentConfig }) => {
   const [password, setPassword] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // Definir el arreglo de cartas igual que en Game.jsx
+  const uniqueCards = [
+    { value: 1, reverseImage: "./images/1.png" },
+    { value: 2, reverseImage: "./images/2.png" },
+    { value: 3, reverseImage: "./images/3.jpg" },
+    { value: 4, reverseImage: "./images/4.png" },
+    { value: 5, reverseImage: "./images/5.png" },
+    { value: 6, reverseImage: "./images/6.svg" },
+    { value: 7, reverseImage: "./images/7.svg" },
+    { value: 8, reverseImage: "./images/8.png" },
+  ];
+  const maxPartners = uniqueCards.length;
   const [config, setConfig] = useState({
     timer: currentConfig.timer || "01:00",
     movements: currentConfig.movements || 16,
     partners: currentConfig.partners || 3
   });
+  const [error, setError] = useState("");
   const adminPassword = process.env.REACT_APP_ADMIN_PASSWORD;
 
   const handlePasswordSubmit = (e) => {
@@ -23,6 +36,11 @@ const ConfigModal = ({ isOpen, onClose, onSaveConfig, currentConfig }) => {
   };
 
   const handleSave = () => {
+    if (config.partners < 1 || config.partners > maxPartners) {
+      setError(`El número de parejas debe ser entre 1 y ${maxPartners}`);
+      return;
+    }
+    setError("");
     onSaveConfig(config);
     onClose();
     setIsAuthenticated(false);
@@ -95,9 +113,10 @@ const ConfigModal = ({ isOpen, onClose, onSaveConfig, currentConfig }) => {
                 value={config.partners}
                 onChange={(e) => setConfig({...config, partners: parseInt(e.target.value)})}
                 min="1"
-                max="6"
+                max={maxPartners}
               />
             </div>
+            {error && <div style={{color: 'red', marginBottom: 10}}>{error}</div>}
 
             <div className="config-buttons">
               <button onClick={handleSave} className="save-btn">
