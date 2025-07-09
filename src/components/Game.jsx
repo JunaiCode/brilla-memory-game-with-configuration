@@ -81,6 +81,14 @@ const Game = ({ movements, setMovements, partners, setPartners, setWin, formated
         value: 6,
         reverseImage: "./images/6.png",
       },
+      {
+        value: 7,
+        reverseImage: "./images/7.svg",
+      },
+      {
+        value: 8,
+        reverseImage: "./images/8.svg",
+      },
     ];
     // duplicar el array
     const pairs = [...cards, ...cards];
