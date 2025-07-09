@@ -116,7 +116,7 @@ const ConfigModal = ({ isOpen, onClose, onSaveConfig, currentConfig }) => {
                 max={maxPartners}
               />
             </div>
-            {error && <div style={{color: 'red', marginBottom: 10}}>{error}</div>}
+            {error && <div style={{color: 'fffff', marginBottom: 10}}>{error}</div>}
 
             <div className="config-buttons">
               <button onClick={handleSave} className="save-btn">
