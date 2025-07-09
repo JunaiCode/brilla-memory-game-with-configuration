@@ -166,23 +166,25 @@
 }
 
 .play-button {
-  border: 0.2rem solid #e0112d;
-  margin: 0 auto;
+  width: 80%;
+  max-width: 400px;
+  border: 0.3rem solid #e0112d;
+  margin: 2rem auto;
   cursor: pointer;
-  margin: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1.5rem 2rem;
   background-color: white;
   color: #e0112d;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   font-weight: bold;
   text-decoration: none;
   z-index: 10;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  box-shadow: 0 8px 25px rgba(224, 17, 45, 0.3);
+  transition: all 0.3s ease;
 }
+
+
 
 .hero-image-content{
   margin-top: 0;
@@ -247,17 +249,20 @@
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .corner {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
-  max-width: 60vw; /* Usamos 'max-width' para que se ajuste a la mitad del ancho de la pantalla máximo */
-  height: auto; /* Permitimos que la altura se ajuste automáticamente */
-  max-height: 40vh; /* Limitamos la altura máxima para que no sea demasiado grande */
-  box-sizing: border-box; /* Asegura que el relleno no afecte el tamaño total */
-  z-index: 1; /* Asegura que el botón esté por encima de otros elementos */
+  max-width: 40vw;
+  width: auto;
+  height: auto;
+  max-height: 30vh;
+  box-sizing: border-box;
+  z-index: 1;
+  object-fit: contain;
 }
 
 .logo-home {
@@ -325,7 +330,8 @@
 }
 
 .play-button:hover {
-  opacity: 0.5;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(224, 17, 45, 0.4);
 }
 
 
@@ -352,6 +358,11 @@
   .logo-nav-bar {
     margin: 0 auto;
   }
+  
+  .corner {
+    max-width: 45vw;
+    max-height: 35vh;
+  }
 }
 
 @media (max-width: 355px) {
@@ -366,6 +377,11 @@
   .stats > p {
     font-size: 0.9rem;
     padding: 0.8rem;
+  }
+  
+  .corner {
+    max-width: 30vw;
+    max-height: 20vh;
   }
 }
 
@@ -446,6 +462,13 @@
     max-width: 300px;
     margin-bottom: 1.5rem;
   }
+  
+  .play-button {
+    width: 85%;
+    max-width: 350px;
+    font-size: 2.2rem;
+    padding: 1.3rem 1.8rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -467,6 +490,19 @@
   
   .complete-page-opacity {
     padding: 1rem;
+  }
+  
+  .corner {
+    max-width: 35vw;
+    max-height: 25vh;
+  }
+  
+  .play-button {
+    width: 90%;
+    max-width: 280px;
+    font-size: 1.8rem;
+    padding: 1.2rem 1.5rem;
+    border-radius: 1.5rem;
   }
 }
 
