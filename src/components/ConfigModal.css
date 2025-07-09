@@ -13,13 +13,13 @@
 }
 
 .config-modal {
-  background: linear-gradient(135deg, #ffe01f 0%, #e0112d 100%);
+  background: linear-gradient(135deg, #ffb600 0%, #e4032e 100%);
   border-radius: 20px;
   padding: 30px;
   max-width: 400px;
   width: 90%;
   position: relative;
-  box-shadow: 0 20px 40px rgba(224, 17, 45, 0.4);
+  box-shadow: 0 20px 40px rgba(228, 3, 46, 0.4);
   border: 3px solid #ffffff;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .config-close-btn:hover {
-  background-color: rgba(224, 17, 45, 0.8);
+  background-color: rgba(228, 3, 46, 0.8);
   color: white;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .auth-btn {
-  background: linear-gradient(45deg, #e0112d, #c41230);
+  background: linear-gradient(45deg, #e4032e, #e4032e);
   color: white;
   border: none;
   padding: 12px 30px;
@@ -91,12 +91,12 @@
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 15px rgba(224, 17, 45, 0.4);
+  box-shadow: 0 4px 15px rgba(228, 3, 46, 0.4);
 }
 
 .auth-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(224, 17, 45, 0.6);
+  box-shadow: 0 6px 20px rgba(228, 3, 46, 0.6);
 }
 
 .config-item {
@@ -120,12 +120,12 @@
   font-size: 14px;
   background: rgba(255, 255, 255, 0.95);
   color: #333;
-  box-shadow: 0 2px 6px rgba(224, 17, 45, 0.2);
+  box-shadow: 0 2px 6px rgba(228, 3, 46, 0.2);
 }
 
 .config-item input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(255, 224, 31, 0.5);
+  box-shadow: 0 0 0 2px rgba(255, 182, 0, 0.5);
 }
 
 .config-buttons {
@@ -146,30 +146,30 @@
 }
 
 .save-btn {
-  background: linear-gradient(45deg, #ffe01f, #ffd700);
+  background: linear-gradient(45deg, #ffb600, #ffb600);
   color: #333;
   font-weight: bold;
-  box-shadow: 0 4px 15px rgba(255, 224, 31, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 182, 0, 0.4);
 }
 
 .save-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 224, 31, 0.6);
-  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  box-shadow: 0 6px 20px rgba(255, 182, 0, 0.6);
+  background: linear-gradient(45deg, #ffb600, #ffb600);
 }
 
 .cancel-btn {
   background: rgba(255, 255, 255, 0.9);
-  color: #e0112d;
-  border: 2px solid #e0112d;
+  color: #e4032e;
+  border: 2px solid #e4032e;
   font-weight: bold;
 }
 
 .cancel-btn:hover {
-  background: #e0112d;
+  background: #e4032e;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(224, 17, 45, 0.3);
+  box-shadow: 0 4px 15px rgba(228, 3, 46, 0.3);
 }
 
 /* Animación de entrada */
@@ -190,7 +190,7 @@
 
 /* Efecto de brillo en el título */
 .auth-section h3, .config-section h3 {
-  background: linear-gradient(45deg, #ffe01f, #ffffff);
+  background: linear-gradient(45deg, #ffb600, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -199,9 +199,9 @@
 
 /* Efecto de hover en los inputs */
 .config-item input:hover {
-  box-shadow: 0 2px 8px rgba(255, 224, 31, 0.3);
+  box-shadow: 0 2px 8px rgba(255, 182, 0, 0.3);
 }
 
 .password-input:hover {
-  box-shadow: 0 4px 12px rgba(255, 224, 31, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 182, 0, 0.3);
 } 

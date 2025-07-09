@@ -15,7 +15,7 @@
   padding: 0.5rem;
   object-fit: contain;
   cursor: pointer;
-  background-color: #e0112d;
+  background-color: #e4032e;
   border-radius: 0.5rem;
   border: none;
 }
@@ -106,7 +106,7 @@
   display: inline-block;
   color: #282c34;
   background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #ffe01f;
+  border: 2px solid #ffb600;
   border-radius: 10px;
   font-weight: bold;
   font-size: 1rem;
@@ -118,14 +118,14 @@
   width: 8rem;
   height: 3rem;
   border-radius: 15px;
-  background: linear-gradient(45deg, #ffe01f, #ffd700);
+  background: linear-gradient(45deg, #ffb600, #ffb600);
   color: #333;
   border: none;
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
   font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(255, 224, 31, 0.3);
+  box-shadow: 0 4px 8px rgba(255, 182, 0, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -133,7 +133,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #e0112d;
+  background-color: #e4032e;
   width: 100%;
   height: 8rem;
   padding: 0.5rem;
@@ -146,7 +146,7 @@
 }
 
 .logo-nav-bar {
-  color: #e0112d;
+  color: #e4032e;
   width: 12rem;
   height: 100%;
 }
@@ -161,26 +161,26 @@
 
 .restart-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(255, 224, 31, 0.5);
-  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  box-shadow: 0 6px 15px rgba(255, 182, 0, 0.5);
+  background: linear-gradient(45deg, #ffb600, #ffb600);
 }
 
 .play-button {
   width: 80%;
   max-width: 400px;
-  border: 0.3rem solid #e0112d;
+  border: 0.3rem solid #e4032e;
   margin: 2rem auto;
   cursor: pointer;
   padding: 1.5rem 2rem;
   background-color: white;
-  color: #e0112d;
+  color: #e4032e;
   border-radius: 2rem;
   font-weight: bold;
   text-decoration: none;
   z-index: 10;
   text-align: center;
   font-size: 2.5rem;
-  box-shadow: 0 8px 25px rgba(224, 17, 45, 0.3);
+  box-shadow: 0 8px 25px rgba(228, 3, 46, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -245,7 +245,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: #ffe01f;
+  background-color: #ffb600;
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -273,7 +273,7 @@
   margin-top: 1rem;
   object-fit: contain;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-  background-color: #e0112d;
+  background-color: #e4032e;
   border-radius: 15px;
   padding: 1rem;
 }
@@ -331,7 +331,7 @@
 
 .play-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(224, 17, 45, 0.4);
+  box-shadow: 0 12px 35px rgba(228, 3, 46, 0.4);
 }
 
 

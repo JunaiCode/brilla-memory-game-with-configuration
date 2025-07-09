@@ -63,31 +63,23 @@ const Game = ({ movements, setMovements, partners, setPartners, setWin, formated
       },
       {
         value: 2,
-        reverseImage: "./images/2.png",
+        reverseImage: "./images/2.jpg",
       },
       {
         value: 3,
-        reverseImage: "./images/3.jpg",
+        reverseImage: "./images/3.png",
       },
       {
         value: 4,
-        reverseImage: "./images/4.png",
+        reverseImage: "./images/4.svg",
       },
       {
         value: 5,
-        reverseImage: "./images/5.png",
+        reverseImage: "./images/5.svg",
       },
       {
         value: 6,
-        reverseImage: "./images/6.svg",
-      },
-      {
-        value: 7,
-        reverseImage: "./images/7.svg",
-      },
-      {
-        value: 8,
-        reverseImage: "./images/8.png",
+        reverseImage: "./images/6.png",
       },
     ];
     // duplicar el array
