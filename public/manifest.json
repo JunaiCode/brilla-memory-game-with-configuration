@@ -1,15 +1,15 @@
 {
-  "short_name": "Memory Game",
-  "name": "Celsia Memory Game",
+  "short_name": "Brilla Memory Game",
+  "name": "Brilla Memory Game",
   "icons": [
     {
-      "src": "/images/logo-navbar.svg",
+      "src": "/images/logo.svg",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/svg+xml"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#ffe01f",
   "background_color": "#ffffff"
 }

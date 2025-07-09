@@ -4,20 +4,20 @@ import Stats from "./Stats";
 import { useNavigate } from "react-router-dom";
 import Timer from "./Timer";
 
-const Game = ({ movements, setMovements, partners, setPartners, setWin, formatedTime, setFormatedTime }) => {
+const Game = ({ movements, setMovements, partners, setPartners, setWin, formatedTime, setFormatedTime, gameConfig }) => {
   const [previousValue, setPreviousValue] = useState(null); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   const [previousCard, setPreviousCard] = useState(null);
   const [previousImage, setPreviousImage] = useState(null);
-  const defaultImage = "./images/celsia-logo-home.svg";
-  const necesaryMovements = 16;
-  const necesaryPartners = 3;
+  const defaultImage = "./images/brilla.svg";
+  const necesaryMovements = gameConfig?.movements || 16;
+  const necesaryPartners = gameConfig?.partners || 3;
   const [cards, setCards] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     resetGame();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [gameConfig]);
 
   useEffect(() => {
     validateWin();
@@ -59,27 +59,35 @@ const Game = ({ movements, setMovements, partners, setPartners, setWin, formated
     const cards = [
       {
         value: 1,
-        reverseImage: "./images/1.svg",
+        reverseImage: "./images/1.png",
       },
       {
         value: 2,
-        reverseImage: "./images/2.svg",
+        reverseImage: "./images/2.png",
       },
       {
         value: 3,
-        reverseImage: "./images/3.svg",
+        reverseImage: "./images/3.jpg",
       },
       {
         value: 4,
-        reverseImage: "./images/4.svg",
+        reverseImage: "./images/4.png",
       },
       {
         value: 5,
-        reverseImage: "./images/5.svg",
+        reverseImage: "./images/5.png",
       },
       {
         value: 6,
         reverseImage: "./images/6.svg",
+      },
+      {
+        value: 7,
+        reverseImage: "./images/7.svg",
+      },
+      {
+        value: 8,
+        reverseImage: "./images/8.png",
       },
     ];
     // duplicar el array
@@ -146,22 +154,23 @@ const Game = ({ movements, setMovements, partners, setPartners, setWin, formated
 
   return (
     <div className="div-game">
-      <nav className="nav-celsia">
-        <img src="/images/logo-navbar.svg" className="logo-nav-bar" alt="logo" />
+      <nav className="nav-brilla">
+        <img src="/images/logo.svg" className="logo-nav-bar" alt="logo" />
       </nav>
       <h1 className="title">
         ¡Arma {necesaryPartners} parejas en menos de {necesaryMovements}{" "}
         movimientos y gana!
       </h1>
-      <Timer formatedTime={formatedTime} setFormatedTime={setFormatedTime} />
-      <Stats movements={movements} partners={partners}/>
+      <Timer formatedTime={formatedTime} setFormatedTime={setFormatedTime} gameConfig={gameConfig} />
+      <div className="stats-container">
+        <Stats movements={movements} partners={partners}/>
+      </div>
       <div className="grid">
-      <img src="/images/historias-game.svg" alt="buena-energia" />
-      <Square
-        cards={cards}
-        changeValues={changeValues}
-        defaultImage={defaultImage}
-      />
+        <Square
+          cards={cards}
+          changeValues={changeValues}
+          defaultImage={defaultImage}
+        />
       </div>
     </div>
   );

@@ -6,10 +6,10 @@ const Card = ({ value, changeValues, defaultImage, reverseImage }) => {
   const handleClick = () => {
     changeValues(value, refButton.current, refImage.current, reverseImage);
     if(refImage.current.src.split("/").pop() !== defaultImage.split("/").pop()){
-    refImage.current.style = "object-fit: fill; border: 2px solid #d9772d;";
+    refImage.current.style = "object-fit: fill; border: 2px solid #f5ba00;";
     refButton.current.style = "padding: 0; background-color: transparent;";
     }else{
-    refButton.current.style = "background-color: transparent; border: 2px solid #d9772d;";
+    refButton.current.style = "background-color: transparent; border: 2px solid #f5ba00;";
     }
   };
 

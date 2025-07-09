@@ -10,11 +10,17 @@ function App() {
   const [movements, setMovements] = useState(0);
   const [partners, setPartners] = useState(0);
   const [formatedTime, setFormatedTime] = useState('01:00');
+  const [gameConfig, setGameConfig] = useState({
+    timer: "01:00",
+    movements: 16,
+    partners: 3
+  });
+
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home setGameConfig={setGameConfig} />} />
           <Route
             path="/game"
             element={
@@ -26,6 +32,7 @@ function App() {
                 setPartners={setPartners}
                 formatedTime={formatedTime}
                 setFormatedTime={setFormatedTime}
+                gameConfig={gameConfig}
               />
             }
           />

@@ -28,7 +28,7 @@ const CompletePage = ({
             )}
             {!win && (
               <h2 className="complete-page-title">
-                Oops! excediste los 16 movimientos o te pasaste del limite de tiempo, vuelve a intentarlo.
+                Oops! excediste los movimientos o te pasaste del limite de tiempo, vuelve a intentarlo.
               </h2>
             )}
             <button onClick={navigateToHome} className="play-button">
