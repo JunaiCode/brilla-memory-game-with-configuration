@@ -40,6 +40,23 @@ const ConfigModal = ({ isOpen, onClose, onSaveConfig, currentConfig }) => {
       setError(`El número de parejas debe ser entre 1 y ${maxPartners}`);
       return;
     }
+    if (isNaN(config.movements) || config.movements <= 0) {
+      setError('El número de movimientos debe ser mayor a 0');
+      return;
+    }
+    // Validar tiempo formato MM:SS y que no sea 00:00
+    const timeRegex = /^([0-9]{2}):([0-9]{2})$/;
+    const match = config.timer.match(timeRegex);
+    if (!match) {
+      setError('El tiempo debe estar en formato MM:SS');
+      return;
+    }
+    const min = parseInt(match[1], 10);
+    const sec = parseInt(match[2], 10);
+    if (min === 0 && sec === 0) {
+      setError('El tiempo no puede ser 00:00');
+      return;
+    }
     setError("");
     onSaveConfig(config);
     onClose();
@@ -92,6 +109,8 @@ const ConfigModal = ({ isOpen, onClose, onSaveConfig, currentConfig }) => {
                 onChange={(e) => setConfig({...config, timer: e.target.value})}
                 placeholder="01:00"
                 pattern="[0-9]{2}:[0-9]{2}"
+                minLength={5}
+                maxLength={5}
               />
             </div>
 
