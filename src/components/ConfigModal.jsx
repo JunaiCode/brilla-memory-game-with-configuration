@@ -9,11 +9,12 @@ const ConfigModal = ({ isOpen, onClose, onSaveConfig, currentConfig }) => {
     movements: currentConfig.movements || 16,
     partners: currentConfig.partners || 3
   });
+  const adminPassword = process.env.REACT_APP_ADMIN_PASSWORD;
 
   const handlePasswordSubmit = (e) => {
     e.preventDefault();
-    // Contraseña simple: "admin123"
-    if (password === "admin123") {
+    // Contraseña tomada de variable de entorno
+    if (password === adminPassword) {
       setIsAuthenticated(true);
     } else {
       alert("Contraseña incorrecta");
